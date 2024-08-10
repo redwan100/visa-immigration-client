@@ -123,13 +123,8 @@ const CreateVisa = () => {
               onChange={handleChange}
               className="mt-1 block w-full px-3 py-2 bg-neutral-700 text-white   focus:outline-none  sm:text-sm"
             >
-              <option value="" disabled>
-                --Select Nationality--
-              </option>
-              <option value="bangladesh">bangladesh</option>
-              <option value="usa">usa</option>
-              <option value="canada">canada</option>
-              <option value="uk">uk</option>
+              <option value="">--Select Nationality--</option>
+              <option value="bangladesh">BANGLADESH</option>
             </select>
           </div>
           <div>

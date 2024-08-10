@@ -63,7 +63,7 @@ const VisaCheckForm = () => {
                 name="visaNumber"
                 type="text"
                 className="w-full bg-neutral-700 py-2 px-3 text-white focus:outline-none border border-neutral-500"
-                placeholder="0102529902"
+                placeholder="A07****"
               />
             </div>
             <div>
@@ -79,7 +79,7 @@ const VisaCheckForm = () => {
                 name="clientNumber"
                 type="text"
                 className="w-full bg-neutral-700 py-2 px-3 text-white focus:outline-none border border-neutral-500"
-                placeholder="0102529902"
+                placeholder="819065"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ const VisaCheckForm = () => {
                 name="passportNumber"
                 type="text"
                 className="w-full bg-neutral-700 py-2 px-3 text-white focus:outline-none border border-neutral-500"
-                placeholder="0102529902"
+                placeholder="A13869347"
               />
             </div>
             <div>
@@ -132,10 +132,7 @@ const VisaCheckForm = () => {
                 className="mt-1 block w-full px-3 py-2 bg-neutral-700 text-white   focus:outline-none  sm:text-sm"
               >
                 <option value="">--Select Nationality--</option>
-                <option value="bangladesh">bangladesh</option>
-                <option value="usa">usa</option>
-                <option value="canada">canada</option>
-                <option value="uk">uk</option>
+                <option value="bangladesh">BANGLADESH</option>
               </select>
             </div>
 
