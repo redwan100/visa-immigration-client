@@ -5,6 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 const AllVisa = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const fetchData = async () => {
     try {
       const res = await axios.get("http://localhost:5000/api/v1/visa/all");
@@ -50,6 +51,9 @@ const AllVisa = () => {
                   client
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  birth date
+                </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   actions
                 </th>
               </tr>
@@ -65,6 +69,9 @@ const AllVisa = () => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {item.clientNumber}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    {item.dateOfBirth}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     <button

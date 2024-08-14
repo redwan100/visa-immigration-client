@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import { AiOutlineDownload } from "react-icons/ai";
 import fLogo from "../../assets/footer_logo.svg";
 
 const VisaCheckForm = () => {
@@ -27,6 +26,39 @@ const VisaCheckForm = () => {
       }
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const handleDownload = async (visaNumber) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/download/${visaNumber}`,
+        {
+          method: "GET",
+          responseType: "blob",
+          headers: {
+            "Content-Type": "application/pdf",
+          },
+        }
+      );
+
+      if (!response.statusText) {
+        throw new Error("Network response was not ok");
+      }
+
+      const blob = new Blob([response.data], { type: "application/pdf" });
+
+      const url = window.URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = visaDetails?.data?.picture; // Naming the file using the visa number
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url); // Clean up
+    } catch (error) {
+      console.error("Failed to download file:", error);
     }
   };
 
@@ -178,10 +210,13 @@ const VisaCheckForm = () => {
                       {visaDetails?.data?.clientNumber}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <button className="text-center w-max mx-auto block text-green-500 text-xl">
-                        <a href="" download={visaDetails?.data?.picture}>
-                          <AiOutlineDownload />
-                        </a>
+                      <button
+                        className="text-center w-max mx-auto block text-green-500 text-xl"
+                        onClick={() =>
+                          handleDownload(visaDetails?.data?.visaNumber)
+                        }
+                      >
+                        down
                       </button>
                     </td>
                   </tr>

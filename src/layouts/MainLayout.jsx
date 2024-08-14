@@ -92,6 +92,7 @@ const MainLayout = () => {
         {/* cards  */}
       </div>
       {/* --------------footer---------------- */}
+
       <footer className="py-6 bg-neutral-950">
         <div className="container mx-auto w-full max-w-[1120px] sm:px-6 px-7">
           {/* top */}
