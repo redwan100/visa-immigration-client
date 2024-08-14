@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AiOutlineLogout } from "react-icons/ai";
+import { AiFillHome, AiOutlineLogout } from "react-icons/ai";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
@@ -15,6 +15,11 @@ const DashboardLayout = () => {
     <div className="bg-neutral-100 w-full h-screen">
       <aside className="max-w-32 w-full h-screen bg-neutral-600 fixed top-0 flex flex-col justify-between pb-9">
         <ul className="">
+          <div className="text-center py-3 text-white text-lg uppercase bg-neutral-800 font-semibold ">
+            <Link to={"/"} className="flex items-center gap-1 justify-center">
+              <AiFillHome /> home
+            </Link>
+          </div>
           <li className="text-center text-white hover:bg-neutral-700 p-3 cursor-pointer border-b border-b-neutral-700">
             <Link to={"/dashboard/create-visa"}>Create</Link>
           </li>

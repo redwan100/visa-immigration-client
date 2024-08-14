@@ -24,11 +24,15 @@ const CreateVisa = () => {
     formDataToSend.append("data", JSON.stringify(userInfo));
 
     try {
-      await axios.post("http://localhost:5000/api/v1/visa", formDataToSend, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      await axios.post(
+        "https://api.immigration-nzu.com/api/v1/visa",
+        formDataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       navigate("/dashboard/all-visa");
     } catch (error) {
       console.log(error);
@@ -125,6 +129,17 @@ const CreateVisa = () => {
             >
               <option value="">--Select Nationality--</option>
               <option value="bangladesh">BANGLADESH</option>
+              <option value="india">INDIA</option>
+              <option value="united-states">UNITED STATES</option>
+              <option value="canada">CANADA</option>
+              <option value="australia">AUSTRALIA</option>
+              <option value="united-kingdom">UNITED KINGDOM</option>
+              <option value="germany">GERMANY</option>
+              <option value="france">FRANCE</option>
+              <option value="china">CHINA</option>
+              <option value="japan">JAPAN</option>
+              <option value="brazil">BRAZIL</option>
+              <option value="south-africa">SOUTH AFRICA</option>
             </select>
           </div>
           <div>

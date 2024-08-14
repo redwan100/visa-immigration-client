@@ -8,7 +8,9 @@ const AllVisa = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/v1/visa/all");
+      const res = await axios.get(
+        "https://api.immigration-nzu.com/api/v1/visa/all"
+      );
       setData(res.data);
       setLoading(false);
     } catch (error) {
@@ -25,7 +27,7 @@ const AllVisa = () => {
   const deleteVisa = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/api/v1/visa/${id}`);
+      await axios.delete(`https://api.immigration-nzu.com/api/v1/visa/${id}`);
       fetchData();
       setLoading(false);
     } catch (error) {

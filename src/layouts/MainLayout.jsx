@@ -40,7 +40,7 @@ const MainLayout = () => {
 
         {/* cards  */}
         <div className="container mx-auto py-4 flex items-center justify-center flex-wrap gap-[1px] px-8 w-full max-w-screen-sm md:grid md:grid-cols-3 ">
-          <div className="bg-neutral-200  py-2 px-3 md:py-16 relative group transition-all duration-400 md:col-span-2 hover:bg-neutral-800 cursor-pointer ">
+          <div className="bg-[#EBEDEF]  py-2 px-3 md:py-16 relative group transition-all duration-400 md:col-span-2 hover:bg-neutral-800 cursor-pointer ">
             <h3 className="text-neutral-800 font-semibold md:text-xl md:font-bold md:px-2 group-hover:text-white">
               Explore and select a visa
             </h3>
@@ -49,7 +49,7 @@ const MainLayout = () => {
               may give you a pathway to live in New
             </p>
           </div>
-          <div className="bg-neutral-200  py-2 px-3 md:py-[3.12rem] relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
+          <div className="bg-[#EBEDEF]  py-2 px-3 md:py-[3.12rem] relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
             <h3 className="text-neutral-800 font-semibold md:text-xl md:font-bold md:px-2 group-hover:text-white">
               Preparing a visa application
             </h3>
@@ -59,7 +59,7 @@ const MainLayout = () => {
             </p>
           </div>
 
-          <div className="bg-neutral-200  py-2 px-3 md:py-16 relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
+          <div className="bg-[#EBEDEF]  py-2 px-3 md:py-16 relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
             <h3 className="text-neutral-800 font-semibold md:text-xl md:font-bold md:px-2 group-hover:text-white">
               Waiting for a visa
             </h3>
@@ -69,7 +69,7 @@ const MainLayout = () => {
             </p>
           </div>
           <Link to={"/visacheck"}>
-            <div className="bg-neutral-200  py-2 px-3 md:py-[4rem] relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
+            <div className="bg-[#EBEDEF]  py-2 px-3 md:py-[4rem] relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
               <h3 className="text-neutral-800 font-semibold md:text-xl md:font-bold md:px-2 group-hover:text-white">
                 Already have a visa
               </h3>
@@ -79,7 +79,7 @@ const MainLayout = () => {
               </p>
             </div>
           </Link>
-          <div className="bg-neutral-200  py-2 px-3 md:py-16 relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
+          <div className="bg-[#EBEDEF]  py-2 px-3 md:py-16 relative md:col-span-1 group  hover:bg-neutral-800 cursor-pointer ">
             <h3 className="text-neutral-800 font-semibold md:text-xl md:font-bold md:px-2 group-hover:text-white">
               Information about NZeTA
             </h3>
@@ -98,11 +98,13 @@ const MainLayout = () => {
           {/* top */}
 
           <div className="w-full flex gap-7 flex-col justify-between sm:items-center sm:flex-row ">
-            <img
-              src={fLogo}
-              alt="footer logo"
-              className="w-[14rem] opacity-80 hover:opacity-100 transition-all cursor-pointer"
-            />
+            <Link to={"https://www.mbie.govt.nz/"} target="_blank">
+              <img
+                src={fLogo}
+                alt="footer logo"
+                className="w-[14rem] opacity-80 hover:opacity-100 transition-all cursor-pointer"
+              />
+            </Link>
             <img
               src={fLogo2}
               alt="footer logo"
