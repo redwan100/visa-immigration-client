@@ -19,7 +19,7 @@ const VisaCheckForm = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://api.immigration-nzu.com/api/v1/visa/filter",
+        "http://localhost:5000/api/v1/visa/filter",
         visaInfo
       );
 
@@ -34,7 +34,7 @@ const VisaCheckForm = () => {
   const handleDownload = async (visaNumber) => {
     try {
       const response = await axios.get(
-        `https://api.immigration-nzu.com/download/${visaNumber}`,
+        `http://localhost:5000/download/${visaNumber}`,
         {
           method: "GET",
           responseType: "blob",

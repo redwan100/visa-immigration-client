@@ -24,15 +24,11 @@ const CreateVisa = () => {
     formDataToSend.append("data", JSON.stringify(userInfo));
 
     try {
-      await axios.post(
-        "https://api.immigration-nzu.com/api/v1/visa",
-        formDataToSend,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+      await axios.post("http://localhost:5000/api/v1/visa", formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       navigate("/dashboard/all-visa");
     } catch (error) {
       console.log(error);
